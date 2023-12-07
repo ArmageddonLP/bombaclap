@@ -85,11 +85,11 @@
                     <execution>
                         <phase>package</phase>
                         <configuration>
-                            <tasks>
+                            <target>
                                 <echo>Move Jar-With-Dependencies to Bombaclap Release</echo>
                                 <move file="${basedir}/target/${artifactId}-1.0-jar-with-dependencies.jar"
                                       tofile="../Bombaclap/Bombaclap-${artifactId}.jar"/>
-                            </tasks>
+                            </target>
                         </configuration>
                         <goals>
                             <goal>run</goal>

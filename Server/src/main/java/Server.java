@@ -42,9 +42,13 @@ public class Server extends Thread {
      * @param args not used
      */
     public static void main(final String[] args) {
+        int port = Constants.PORT;
+        if (args.length > 0) {
+            port = Integer.parseInt(args[0]);
+        }
         BombermanServer.getInstance();
-        System.out.println("Server up!");
-        try (ServerSocket server = new ServerSocket(Constants.PORT)) {
+        System.out.println("Server up! Port: " + port);
+        try (ServerSocket server = new ServerSocket(port)) {
             while (true) {
                 Socket client = server.accept();
                 Server connection = new Server(client);

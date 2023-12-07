@@ -25,12 +25,12 @@
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-assembly-plugin</artifactId>
-            <version>3.3.0</version>
+            <version>3.6.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-antrun-plugin</artifactId>
-            <version>3.0.0</version>
+            <version>3.1.0</version>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -49,7 +49,7 @@
                     <execution>
                         <phase>package</phase>
                         <configuration>
-                            <tasks>
+                            <target>
                                 <echo>Create Bombaclap Release folder</echo>
                                 <mkdir dir="${basedir}/Bombaclap"/>
                                 <echo>Copy Assets to Bombaclap Release</echo>
@@ -57,7 +57,11 @@
                                 <copy todir="${basedir}/Bombaclap/assets">
                                     <fileset dir="${basedir}/assets" />
                                 </copy>
-                            </tasks>
+                                <mkdir dir="${basedir}/Bombaclap/server-commands"/>
+                                <copy todir="${basedir}/Bombaclap/server-commands">
+                                    <fileset dir="${basedir}/server-commands" />
+                                </copy>
+                            </target>
                         </configuration>
                         <goals>
                             <goal>run</goal>

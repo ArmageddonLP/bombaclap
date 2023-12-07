@@ -10,7 +10,8 @@ and unzip it.
 ## Usage
 Playing a game of bombaclap requires the following steps to be gone through:
 1. Start the Bombaclap-Server.jar by opening a terminal of your choice and running the following command:
-    - ```java -jar Bombaclap-Server.jar```
+    - ```java -jar Bombaclap-Server.jar {port}```
+    - Replace {port} with the port you would like the server to run on, the default port is 8765 if no port is specified
     - If java is not installed please refer to this link [Java](https://www.oracle.com/java/technologies/downloads/) to install java and start again at step 1
 2. Start the Bombaclap-Client.jar
 3. Enter the ip-address and port of the machine running the Bombaclap-Server, the default values are for testing a local server
