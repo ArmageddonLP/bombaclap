@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.StackPane?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<StackPane prefWidth="600" prefHeight="600">
+    <HBox style="-fx-background-color: linear-gradient(to left bottom, #021634, #2d1946, #581149, #7e003c, #981022);; -fx-alignment: center">
+        <Text style="-fx-fill: white; -fx-font-weight: bold; -fx-font-size: 80">Bombaclap</Text>
+    </HBox>
+</StackPane>
